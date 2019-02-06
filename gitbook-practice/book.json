@@ -1,0 +1,8 @@
+{
+    "plugins": ["mermaid","-sharing","hide-published-with","header"],
+    "pluginsConfig": {
+        "layout": {
+          "headerPath" : "layouts/header.html"
+        }
+    }
+}

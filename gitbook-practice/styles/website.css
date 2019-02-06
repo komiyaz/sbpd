@@ -1,0 +1,80 @@
+h1 {
+    border-left: 10px solid #000000;
+    padding: 0 0 0 20px;
+}
+h2 {
+    border-bottom: 3px solid #000000;
+}
+ul.summary li.header {
+    font-size: 16px;
+}
+ul.summary > li.chapter  {
+    border-bottom: 1px solid #000000;
+    display: none;
+}
+ul.summary > li.chapter > ul {
+    display: none;
+}
+.book-header-original {
+    height: 100px;
+    display: block;
+    background: #e7e9ff;
+    margin: 0;
+    padding: 0;
+}
+.book-header-original p {
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+.book-summary.is-fixed {
+    position: fixed;
+    top: 0 !important;
+}
+.book-summary,.book-body {
+    top: 100px !important;
+}
+html,.book-body .body-inner,.book-body {
+    overflow-y: auto;
+}
+.book-body {
+    position: static;
+    margin: 0 0 0 300px;
+}
+.book-body .body-inner {
+    position: static;
+}
+.navigation-next,.navigation-prev,.book-summary #book-search-input {
+    display: none;
+}
+#pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #000000;
+    opacity: .5;
+    cursor: pointer;
+}
+#pagetop:hover {
+    opacity: .6;
+}
+#pagetop a {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    border-top: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    border-radius: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    outline: none;
+}
