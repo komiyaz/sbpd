@@ -69,6 +69,7 @@ $(function(){
             Cookies.remove(('contents' + ++i));
         });
     });
+    $(window).scrollTop($('body').offset().top);
 });
 
 //サイドナビの追従
@@ -76,6 +77,10 @@ $(function() {
     var $fixElement = $('.book-summary');
     var baseFixPoint = $fixElement.offset().top;
     var fixClass = 'is-fixed';
+
+    if ($(window).scrollTop() != 0) {
+            $fixElement.addClass(fixClass);
+    }
 
     function fixFunction() {
         var windowScrolltop = $(window).scrollTop();
@@ -107,3 +112,74 @@ $(function(){
         return false;
     });
 });
+
+
+//スムーズスクロール（ページ内リンク移動）
+
+//スクロール量を取得
+function getXScrolled() {
+  return (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft
+}
+function getYScrolled() {
+  return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+}
+
+//イージング（easeInOutSine）
+function easing( t, b, c, d ) {
+  return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+};
+
+//ハッシュから対象エレメントを取得する関数
+function hashElement( h ){
+  var nameORid = decodeURI( h.substr(1) );
+  return ( document.getElementsByName( nameORid ).length ) ? document.getElementsByName( nameORid )[0]: document.getElementById( nameORid );
+};
+
+//エレメントの位置を取得する関数
+function targetPos ( a ) {
+  var getPos = a.getBoundingClientRect();
+  return getPos.top + getYScrolled();
+};
+
+//移動用関数
+function pageScroll( te ){
+  var posX = getXScrolled();
+  var posY = getYScrolled();
+  var moved = targetPos( te ) - posY;
+  var tween = ( moved > 5000 ) ? Math.round( Math.abs( moved ) * 0.001 ) : 5;
+  var n = 1;
+  (function scrollMoved () {
+    if ( moved ) {
+      window.scrollTo( posX, easing( n, posY, moved, tween) );
+      n ++ ;
+      if ( n <= tween ) {
+        window.setTimeout( scrollMoved, 1 );
+      }
+    }
+  })();
+};
+
+//ページ内リンクにイベント登録
+var entryLinks = document.getElementsByTagName('a');
+if ( entryLinks.length ) {
+  for( var i = 0; entryLinks.length >  i; i++ ) {
+    var getATag = entryLinks[i];
+    if ( ( getATag.hash ) && ( getATag.href.indexOf( location.href.replace( location.hash, '' ) ) === 0 ) ) {
+
+      if ( getATag.addEventListener ) {
+        getATag.addEventListener( 'click', function(e) {
+          ( e.preventDefault ) ? e.preventDefault(): e.returnValue = false
+          pageScroll( hashElement( e.target.hash ) );
+          return false;
+        });
+      } else {
+        getATag.onclick = function(e) {
+          ( e.preventDefault) ? e.preventDefault(): e.returnValue = false;
+          pageScroll( hashElement( e.target.hash ) );
+          return false;
+        }
+      }
+    }
+  }
+}
+
