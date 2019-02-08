@@ -40,6 +40,8 @@ $(function(){
         $('ul.summary > li.chapter[data-level^=' + chnum + ']').show();
         $('ul.summary li#contents' + chnum).addClass('flg');
     }
+    //中項目が小項目を持たない場合
+    $("ul.summary > li.chapter:not(:has(ul.articles))").addClass('nochild');
     for (var i = 1; i <= $('ul.summary li.header').length; i++) {
     // クッキーがblockであれば読み込み時にメニューをオープンする 
         if (Cookies.get('contents' + i) == 'block') {
@@ -52,7 +54,7 @@ $(function(){
 $(function(){
     //ボタン追加
     $('.book-summary #book-search-input').after('<div class="operation_button"><p class="all_open">全て開く</p><p class="all_close">全て閉じる</p></div>');
-    $('ul.summary .divider').before('<li class="m_print"><a href="javascript:void(0)" onclick="window.print();return false;">マニュアルをプリントアウト</a></li>');
+    $('ul.summary').after('<p class="m_print"><a href="javascript:void(0)" onclick="window.print();return false;">マニュアルをプリントアウト</a></p>');
     $('.book-body .body-inner').append('<p id="pagetop"><a href="#"></a></p>');
     //ボタンの動作
 	$('.book-summary .all_open').click(function(){
