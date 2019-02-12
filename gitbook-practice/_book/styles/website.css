@@ -261,7 +261,7 @@ nav .m_print a:before {
     width: 20px;
     height: 24px;
     display: block;
-    background: url("/layouts/img/icon_pdf.png");
+    background: url("../layouts/img/icon_pdf.png");
     position: absolute;
     top: 12px;
     left: 14px;
@@ -351,4 +351,59 @@ nav .m_print a:before {
 }
 .markdown-section table tr:nth-child(2n) {
     background: transparent;
+}
+.markdown-section ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.markdown-section ol li {
+    color: #1a87ba;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    counter-increment: heading;
+}
+.markdown-section ol li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '0' counter(heading) '.';
+}
+.markdown-section ol li:nth-of-type(n + 10):before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: counter(heading) '.';
+}
+.markdown-section ol li p {
+    color: #000000;
+    margin: 0 0 1.25em;
+    padding: 0 0 0 1.75em;
+}
+.markdown-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.markdown-section ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+.markdown-section ul li:before {
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background: #1a87ba;
+    position: absolute;
+    top: 0.563em;
+    left: 0;
+}
+.markdown-section ul li p {
+    margin: 0 0 1.25em;
+    padding: 0 0 0 1em;
 }
