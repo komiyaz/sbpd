@@ -320,18 +320,21 @@ nav .m_print a:before {
     line-height: 1.2;
     margin: 2.5em 0 0.75em;
 }
+.markdown-section .h6_text {
+    font-size: 0.875em;
+}
 .markdown-section table {
-    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 .markdown-section table th {
     font-size: 0.875em;
     line-height: 1.2;
     padding: 0.875em 0.625em;
     background: #f4fbfd;
+    border-top: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
     border-left: none;
-    border-top: none;
+    border-bottom: none;
 }
 .markdown-section table th:last-child,.markdown-section table td:last-child {
     border-right: none;
@@ -340,9 +343,12 @@ nav .m_print a:before {
     font-size: 0.875em;
     line-height: 1.2;
     padding: 1.5em 0.75em 1.375em;
+    border-top: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
     border-left: none;
+    border-bottom: none;
+}
+.markdown-section table td.no_texttd {
     border-top: none;
 }
 .markdown-section table tr {
@@ -406,4 +412,12 @@ nav .m_print a:before {
 .markdown-section ul li p {
     margin: 0 0 1.25em;
     padding: 0 0 0 1em;
+}
+.markdown-section p.caution {
+    color: #000000;
+    font-size: 0.875em;
+    margin: 0 0 0.75em;
+}
+.markdown-section sup {
+    font-size: 0.625em;
 }

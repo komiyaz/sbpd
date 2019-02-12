@@ -56,6 +56,14 @@ $(function(){
     $('.book-summary #book-search-input').after('<div class="operation_button"><p class="all_open">全て開く</p><p class="all_close">全て閉じる</p></div>');
     $('ul.summary').after('<p class="m_print"><a href="javascript:void(0)" onclick="window.print();return false;">マニュアルをプリントアウト</a></p>');
     $('.book-body .body-inner').append('<p id="pagetop"><a href="#"></a></p>');
+    //class追加
+    $('.markdown-section p:contains("※")').addClass('caution');
+    $('.markdown-section h6').next('p').addClass('h6_text');
+    $('.markdown-section table td').each(function() {
+        if ($(this).text() == '') {
+            $(this).addClass('no_texttd');
+        }
+    });
     //ボタンの動作
 	$('.book-summary .all_open').click(function(){
         $('ul.summary > li.chapter').show();
