@@ -1,0 +1,24 @@
+.book-summary,.book-header {
+    display: none;
+}
+.book.with-summary .book-body {
+    margin: 0;
+}
+.markdown-section h2,.markdown-section h3,.markdown-section h4,.markdown-section h5,.markdown-section h6,.markdown-section p,.markdown-section ul,.markdown-section ol,.markdown-section table,.markdown-section p.caution {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.markdown-section h1 {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.25em;
+    padding: 0.75em 0 0.75em 1.25em;
+    font-size: 1.625em;
+    color: #ffffff;
+    background: #1a87ba;
+}
+.markdown-section h2 {
+    margin: 0 auto 0.75em;
+    font-size: 1.625em;
+}

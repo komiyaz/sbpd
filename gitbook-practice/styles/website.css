@@ -224,7 +224,7 @@ nav {
     padding: 14px 0 0 8px !important;
     border-left: 3px solid #ffffff;
 }
-.book-summary ul.summary > .chapter.active > a.toggle_on {
+.book-summary ul.summary > .chapter.active > a,.book-summary ul.summary > .chapter.active > a.toggle_on {
     color: #000000 !important;
     border-left: 3px solid #1a87ba;
 }
@@ -281,6 +281,7 @@ nav .m_print a:before {
 .markdown-section h2 {
     font-size: 2em;
     margin: 0 0 0.5em;
+    border-bottom: 3px solid #1a87ba;
 }
 .markdown-section h3 {
     font-size: 1.375em;

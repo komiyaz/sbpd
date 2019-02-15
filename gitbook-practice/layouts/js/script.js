@@ -1,7 +1,7 @@
 $(function(){
     //大項目に連番のIDを追加
     $('ul.summary li.header').each(function(i){
-        $(this).attr('id','contents' + (i+1));
+        $(this).attr('id','subcatergory' + (i+1));
     });
     //中項目をクリックしたときに小項目を表示
 	$('ul.summary > li.chapter > a').click(function(){
@@ -38,15 +38,15 @@ $(function(){
         $('ul.summary > li.chapter.active > a').addClass('toggle_on');
         var chnum = $('ul.summary > li.chapter.active').attr('data-level').substr(0,1);
         $('ul.summary > li.chapter[data-level^=' + chnum + ']').show();
-        $('ul.summary li#contents' + chnum).addClass('flg');
+        $('ul.summary li#subcatergory' + chnum).addClass('flg');
     }
     //中項目が小項目を持たない場合
     $("ul.summary > li.chapter:not(:has(ul.articles))").addClass('nochild');
     for (var i = 1; i <= $('ul.summary li.header').length; i++) {
     // クッキーがblockであれば読み込み時にメニューをオープンする 
-        if (Cookies.get('contents' + i) == 'block') {
+        if (Cookies.get('subcatergory' + i) == 'block') {
             $('ul.summary > li.chapter[data-level^=' + i + ']').show();
-            $('ul.summary li#contents' + i).addClass('flg');
+            $('ul.summary li#subcatergory' + i).addClass('flg');
         }
     }
 });
@@ -69,14 +69,14 @@ $(function(){
         $('ul.summary > li.chapter').show();
         $('ul.summary li.header').addClass('flg');
         $('ul.summary li.header').each(function(i) {
-            Cookies.set(('contents' + ++i), ('block'), {expires: 1});
+            Cookies.set(('subcatergory' + ++i), ('block'), {expires: 1});
         });
     });
 	$('.book-summary .all_close').click(function(){
         $('ul.summary > li.chapter').hide();
         $('ul.summary li.header').removeClass('flg');
         $('ul.summary li.header').each(function(i) {
-            Cookies.remove(('contents' + ++i));
+            Cookies.remove(('subcatergory' + ++i));
         });
     });
     $(window).scrollTop($('body').offset().top);
@@ -124,72 +124,18 @@ $(function(){
 });
 
 
-//スムーズスクロール（ページ内リンク移動）
-
-//スクロール量を取得
-function getXScrolled() {
-  return (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft
-}
-function getYScrolled() {
-  return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
-}
-
-//イージング（easeInOutSine）
-function easing( t, b, c, d ) {
-  return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
-};
-
-//ハッシュから対象エレメントを取得する関数
-function hashElement( h ){
-  var nameORid = decodeURI( h.substr(1) );
-  return ( document.getElementsByName( nameORid ).length ) ? document.getElementsByName( nameORid )[0]: document.getElementById( nameORid );
-};
-
-//エレメントの位置を取得する関数
-function targetPos ( a ) {
-  var getPos = a.getBoundingClientRect();
-  return getPos.top + getYScrolled();
-};
-
-//移動用関数
-function pageScroll( te ){
-  var posX = getXScrolled();
-  var posY = getYScrolled();
-  var moved = targetPos( te ) - posY;
-  var tween = ( moved > 5000 ) ? Math.round( Math.abs( moved ) * 0.001 ) : 5;
-  var n = 1;
-  (function scrollMoved () {
-    if ( moved ) {
-      window.scrollTo( posX, easing( n, posY, moved, tween) );
-      n ++ ;
-      if ( n <= tween ) {
-        window.setTimeout( scrollMoved, 1 );
-      }
-    }
-  })();
-};
-
-//ページ内リンクにイベント登録
-var entryLinks = document.getElementsByTagName('a');
-if ( entryLinks.length ) {
-  for( var i = 0; entryLinks.length >  i; i++ ) {
-    var getATag = entryLinks[i];
-    if ( ( getATag.hash ) && ( getATag.href.indexOf( location.href.replace( location.hash, '' ) ) === 0 ) ) {
-
-      if ( getATag.addEventListener ) {
-        getATag.addEventListener( 'click', function(e) {
-          ( e.preventDefault ) ? e.preventDefault(): e.returnValue = false
-          pageScroll( hashElement( e.target.hash ) );
-          return false;
-        });
-      } else {
-        getATag.onclick = function(e) {
-          ( e.preventDefault) ? e.preventDefault(): e.returnValue = false;
-          pageScroll( hashElement( e.target.hash ) );
-          return false;
-        }
-      }
-    }
-  }
-}
-
+$(function(){
+    $('a[href*="#"]').click(function(){
+        $('.book-summary ul.summary > .chapter').removeClass('active');
+        $('.book-summary ul.summary > .chapter > ul.articles > .chapter').removeClass('active');
+        $(this).parent().addClass('active');
+        var speed = 500; //移動完了までの時間(sec)を指定
+        var href= $(this).attr("href");
+        var str = href.split('#');
+        var href2 = '#' + str[1];
+        var target = $(href2 == "#" || href == "" ? 'html' : href2);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+    });
+});
