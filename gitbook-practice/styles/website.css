@@ -280,13 +280,14 @@ nav .m_print a:before {
 }
 .markdown-section h2 {
     font-size: 2em;
+    line-height: 1.5;
     margin: 0 0 0.5em;
     border-bottom: 3px solid #1a87ba;
 }
 .markdown-section h3 {
     font-size: 1.375em;
     line-height: 1.4;
-    margin: 2.5em 0 1em;
+    margin: 2.5em 0 1.25em;
     border: 1px solid #e5e5e5;
     border-radius: 4px;
     padding: 10px 27px 8px;
@@ -322,6 +323,7 @@ nav .m_print a:before {
     margin: 2.5em 0 0.75em;
 }
 .markdown-section .h6_text {
+    color: #000000;
     font-size: 0.875em;
 }
 .markdown-section table {

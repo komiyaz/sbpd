@@ -59,6 +59,10 @@ $(function(){
     //class追加
     $('.markdown-section p:contains("※")').addClass('caution');
     $('.markdown-section h6').next('p').addClass('h6_text');
+    $('.markdown-section h1').next('h2').addClass('mgt0');
+    $('.markdown-section h2').next('h3').addClass('mgt0');
+    $('.markdown-section h3').next('h4').addClass('mgt0');
+    $('.markdown-section h4').next('h5').addClass('mgt0');
     $('.markdown-section table td').each(function() {
         if ($(this).text() == '') {
             $(this).addClass('no_texttd');
