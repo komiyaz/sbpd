@@ -57,7 +57,11 @@ $(function(){
     $('ul.summary').after('<p class="m_print"><a href="javascript:void(0)" onclick="window.print();return false;">マニュアルをプリントアウト</a></p>');
     $('.book-body .body-inner').append('<p id="pagetop"><a href="#"></a></p>');
     //class追加
-    $('.markdown-section p:contains("※")').addClass('caution');
+    $('.markdown-section p:contains("※"),.markdown-section td:contains("※")').each(function() {
+        if ($(this).text().startsWith('※')) {
+            $(this).addClass('caution');
+        }
+    });
     $('.markdown-section h6').next('p').addClass('h6_text');
     $('.markdown-section h1').next('h2').addClass('mgt0');
     $('.markdown-section h2').next('h3').addClass('mgt0');
@@ -127,7 +131,7 @@ $(function(){
     });
 });
 
-
+//アンカーリンクの動作
 $(function(){
     $('a[href*="#"]').click(function(){
         $('.book-summary ul.summary > .chapter').removeClass('active');

@@ -1,3 +1,76 @@
+.book-header-original {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+.book-header-original .head_left {
+    height: 100%;
+    padding: 0;
+    float: none;
+}
+.book-header-original .head_left:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.book-header-original .head_left .logo {
+    width: 331px;
+    height: 65px;
+    margin: auto ;
+    float: none;
+    position: absolute;
+    top: -105px;
+    left: 40px;
+    bottom: 0;
+}
+.book-header-original .head_left .head_tit {
+    font-size: 15px;
+    font-weight: normal;
+    height: 30px;
+    padding: 0 0 0 155px;
+    margin: auto;
+    float: none;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    bottom: 0;
+}
+.book-header-original .head_left .head_tit:before {
+    content: 'プライムドライブ';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.book-header-original .head_left .update_date {
+    font-size: 10px;
+    height: 20px;
+    padding: 0;
+    float: none;
+    margin: auto;
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    bottom: 0;
+}
+.book-header-original .head_left .sb_logo {
+    display: block;
+    width: 147px;
+    height: 17px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+.book-header-original #book-search-input {
+    display: none;
+}
+
 .book.with-summary {
     overflow: auto;
     overflow-y: auto;
@@ -54,9 +127,6 @@
 .markdown-section h2 {
     margin: 3em auto 1em;
     font-size: 1.625em;
-}
-.markdown-section .mgt0 {
-    margin-top: 0 !important;
 }
 #pagetop {
     display: none !important;

@@ -1,3 +1,6 @@
+body {
+    min-width: 950px;
+}
 .book-header-original {
     height: 80px;
     display: block;
@@ -32,6 +35,9 @@
     padding: 16px 0 0;
     margin: 0;
     float: left;
+}
+.book-header-original .head_left .sb_logo {
+    display: none;
 }
 .book-header-original #book-search-input {
     width: 200px;
@@ -261,7 +267,7 @@ nav .m_print a:before {
     width: 20px;
     height: 24px;
     display: block;
-    background: url("/layouts/img/icon_pdf.png");
+    background: url(/layouts/img/icon_pdf.png);
     position: absolute;
     top: 12px;
     left: 14px;
@@ -281,7 +287,7 @@ nav .m_print a:before {
 .markdown-section h2 {
     font-size: 2em;
     line-height: 1.5;
-    margin: 0 0 0.5em;
+    margin: 3em 0 0.5em;
     border-bottom: 3px solid #1a87ba;
 }
 .markdown-section h3 {
@@ -331,6 +337,7 @@ nav .m_print a:before {
 }
 .markdown-section table th {
     font-size: 0.875em;
+    color: #000000;
     line-height: 1.2;
     padding: 0.875em 0.625em;
     background: #f4fbfd;
@@ -344,6 +351,7 @@ nav .m_print a:before {
 }
 .markdown-section table td {
     font-size: 0.875em;
+    color: #000000;
     line-height: 1.2;
     padding: 1.5em 0.75em 1.375em;
     border-top: 1px solid #e5e5e5;
@@ -353,6 +361,9 @@ nav .m_print a:before {
 }
 .markdown-section table td.no_texttd {
     border-top: none;
+}
+.markdown-section table td.caution {
+    font-size: 0.875em;
 }
 .markdown-section table tr {
     background: transparent;
@@ -423,4 +434,7 @@ nav .m_print a:before {
 }
 .markdown-section sup {
     font-size: 0.625em;
+}
+.markdown-section .mgt0 {
+    margin-top: 0 !important;
 }
