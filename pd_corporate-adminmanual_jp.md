@@ -130,8 +130,8 @@ https://secure.primedrive.jp/admin/コーポレートID
 |  登録通知メール(新規登録時) | ユーザ登録完了後に通知メールを自動送付します。 | － |
 |  言語 | 画面言語を設定します。保管するファイル/フォルダ名は適用対象外となります。 | － |
 |  コメント（備考） | 2000文字まで入力可能。 | － |
-|  ローカルメール設定 | ローカルメーラによる通知送付時に、メール本文の文字化けを防止するため、利用するメーラの種類を設定します。 |
-|   | ・Windows Mail<br/> ・Outlook2007/2010/2013/2016<br/> ・Mac OS Mail<br/> ・Thunderbird |
+|  ローカルメール設定 | ローカルメーラによる通知送付時に、メール本文の文字化けを防止するため、利用するメーラの種類を設定します。 | － |
+|   | ・Windows Mail<br/> ・Outlook2007/2010/2013/2016<br/> ・Mac OS Mail<br/> ・Thunderbird | &nbsp; |
 
 ### ユーザ基本情報：一括変更可能項目
 
@@ -143,8 +143,8 @@ https://secure.primedrive.jp/admin/コーポレートID
 |  ワークフロー承認者 | ワークフロー承認者に指定します。コントラクタは、承認者に指定できません。 |
 |  ユーザ利用状況 | 利用中/ロック中（利用停止中）から選択します。 |
 |  言語 | 画面言語を設定します。保管するファイル/フォルダ名は適用対象外となります。 |
-|  ローカルメール設定 | ローカルメーラによる通知送付時に、メール本文の文字化けを防止するため、利用するメーラの種類を設定します。 | － |
-|   | ・Windows Mail<br/> ・Outlook2007/2010/2013/2016<br/> ・Mac OS Mail<br/> ・Thunderbird | &nbsp; |
+|  ローカルメール設定 | ローカルメーラによる通知送付時に、メール本文の文字化けを防止するため、利用するメーラの種類を設定します。 |
+|   | ・Windows Mail<br/> ・Outlook2007/2010/2013/2016<br/> ・Mac OS Mail<br/> ・Thunderbird |
 
 ## ユーザポリシー設定項目
 
@@ -760,7 +760,7 @@ PrimeDriveでは、登録済みのIDとパスワードによるログイン認�
 
 |  **項目名** | **説明** |
 |  :------: | ------ |
-|  Office Online | Microsoft Office Onlineと連携し、WEBブラウザ上でOfficeファイルの閲覧・編集を行う機能です。 詳細は[コーポレートポリシー（Microsoft Office Online連携）](#コーポレートポリシー（Microsoft-Office-Online連携）)をご確認下さい。 ※この設定は、コーポレート管理者のみ変更することが出来ます。 |
+|  Office Online | Microsoft Office Onlineと連携し、WEBブラウザ上でOfficeファイルの閲覧・編集を行う機能です。 詳細は[コーポレートポリシー（Microsoft Office Online連携）](#コーポレートポリシー（microsoft-office-online連携）)をご確認下さい。 ※この設定は、コーポレート管理者のみ変更することが出来ます。 |
 |   | 利用する/利用しない |
 |  Officeアプリ(iOS) | iPad/iPhone上のOfficeアプリ(Excel/Word/PowerPoint)からPrimeDriveに保存されているファイルを開く操作です。 |
 |   | 利用する/利用しない |
