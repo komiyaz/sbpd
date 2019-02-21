@@ -378,14 +378,15 @@ nav .m_print a:before {
     list-style: none;
 }
 .markdown-section ol li {
-    color: #1a87ba;
-    margin: 0;
-    padding: 0;
+    color: #000000;
+    margin: 0 0 1.25em;
+    padding: 0 0 0 1.75em;
     list-style: none;
     position: relative;
     counter-increment: heading;
 }
 .markdown-section ol li:before {
+    color: #1a87ba;
     position: absolute;
     top: 0;
     left: 0;
@@ -397,19 +398,14 @@ nav .m_print a:before {
     left: 0;
     content: counter(heading) '.';
 }
-.markdown-section ol li p {
-    color: #000000;
-    margin: 0 0 1.25em;
-    padding: 0 0 0 1.75em;
-}
 .markdown-section ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .markdown-section ul li {
-    margin: 0;
-    padding: 0;
+    margin: 0 0 1.25em;
+    padding: 0 0 0 1em;
     list-style: none;
     position: relative;
 }
@@ -422,10 +418,6 @@ nav .m_print a:before {
     position: absolute;
     top: 0.563em;
     left: 0;
-}
-.markdown-section ul li p {
-    margin: 0 0 1.25em;
-    padding: 0 0 0 1em;
 }
 .markdown-section p.caution {
     color: #000000;

@@ -10,6 +10,5 @@
 
 ※ 推奨ブラウザ:Internet Explorer　11(最新版)、Chrome（最新版）、Firefox（最新版）、Safari（最新版）
 
-※ ブラウザ Chromeにおいては、入力操作時IMEの制御ができません。
-
 ※ Windows8.0をご利用の場合はWindows8.1へのバージョンアップをお願いします。
+
