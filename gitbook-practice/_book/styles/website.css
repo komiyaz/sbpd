@@ -275,6 +275,9 @@ nav .m_print a:before {
 .book-body .book-header h1 {
     display: none;
 }
+.book-body .book-header .btn {
+    display: none;
+}
 .book-body .page-wrapper .page-inner {
     max-width: 1500px;
 }
