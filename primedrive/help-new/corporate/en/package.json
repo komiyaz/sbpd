@@ -1,0 +1,19 @@
+{
+  "name": "gitbook-practice",
+  "version": "1.0.0",
+  "description": "Window PowerShell(コマンドプロンプト)を管理者として開きコマンドを実行します。  \r Cドライブ直下にこのリポジトリをクローンしている場合はコマンドは以下の通りです。",
+  "main": "index.js",
+  "scripts": {
+    "gitbook": "gitbook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://sbweb.backlog.jp/git/MYSB/previewBox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}

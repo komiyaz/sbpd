@@ -1,0 +1,17 @@
+{
+    "plugins": ["mermaid","-sharing","hide-published-with","header","favicon"],
+    "pluginsConfig": {
+        "layout": {
+          "headerPath" : "layouts/header.html",
+        "favicon":{
+        "shortcut": "/layouts/img/favicon.ico",
+        "bookmark": "/layouts/img/favicon.ico",
+        "appleTouch": "/layouts/img/favicon.ico",
+        "appleTouchMore": {
+            "120x120": "/layouts/img/favicon.ico",
+            "180x180": "/layouts/img/favicon.ico"
+          }
+        }
+      }
+  }
+}

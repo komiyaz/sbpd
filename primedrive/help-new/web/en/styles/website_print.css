@@ -1,0 +1,150 @@
+.book-header-original {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+.book-header-original .head_left {
+    height: 100%;
+    padding: 0;
+    float: none;
+}
+.book-header-original .head_left:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.book-header-original .head_left .logo {
+    width: 331px;
+    height: 65px;
+    margin: auto ;
+    float: none;
+    position: absolute;
+    top: -105px;
+    left: 40px;
+    bottom: 0;
+}
+.book-header-original .head_left .head_tit {
+    font-size: 15px;
+    font-weight: normal;
+    height: 30px;
+    padding: 0 0 0 130px;
+    margin: auto;
+    float: none;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    bottom: 0;
+    font-family: Roboto,JapanSans80,Noto Sans Japanese,sans-serif;
+}
+.book-header-original .head_left .head_tit:before {
+    content: 'PrimeDrive';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.book-header-original .head_left .update_date {
+    font-size: 10px;
+    height: 20px;
+    padding: 0;
+    float: none;
+    margin: auto;
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    bottom: 0;
+    font-family: Roboto,JapanSans80,Noto Sans Japanese,sans-serif;
+}
+.book-header-original .head_left .sb_logo {
+    display: block;
+    width: 147px;
+    height: 17px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+.book-header-original #book-search-input {
+    display: none;
+}
+
+.book.with-summary {
+    overflow: auto;
+    overflow-y: auto;
+    height: auto;
+}
+.book-header,.book.with-summary .book-summary,.book-header-original #book-search-input {
+    display: none;
+}
+.book.with-summary .book-body {
+    margin: 0;
+    transform: none !important;
+    font-family: Roboto,JapanSans80,Noto Sans Japanese,sans-serif;
+}
+.markdown-section h2,.markdown-section h3,.markdown-section h4,.markdown-section h5,.markdown-section h6,.markdown-section p,.markdown-section ul,.markdown-section ol,.markdown-section table,.markdown-section p.caution {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.markdown-section h1 {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.25em;
+    padding: 0.3em 0 0.3em 1.25em;
+    font-size: 2.0em;
+    color: #ffffff;
+    background: #1a87ba;
+    position: relative;
+    page-break-before: always;
+}
+.markdown-section h1:after {
+    content: '';
+    width: 120px;
+    height: 23px;
+    display: block;
+    /* ------ ローカルパス ------ */
+    background: url(/layouts/img/h1_logo.png) center center /contain no-repeat;
+    /* ------ 社内テストアップパス ------ */
+    /* background: url(/mobile/_lab/sandbox/takeda_sh/primedrive/help-new/web/en/layouts/img/h1_logo.png) center center /contain no-repeat; */
+    /* ------ 納品パス ------ */
+    /* background: url(/help-new/web/en/layouts/img/h1_logo.png) center center /contain no-repeat; */
+    position: absolute;
+    top: -23px;
+    right: 35px;
+    bottom: 0;
+    margin: auto;
+}
+.markdown-section h1:before {
+    content: 'User manual';
+    height: 20px;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    top: 29px;
+    right: 35px;
+    bottom: 0;
+    margin: auto;
+    font-family: Roboto,JapanSans80,Noto Sans Japanese,sans-serif;
+}
+.markdown-section h2 {
+    margin: 3em auto 1em;
+    font-size: 1.625em;
+}
+#pagetop {
+    display: none !important;
+}
+.markdown-section table {
+    page-break-inside: auto;
+    border-collapse: separate;
+}
+.markdown-section h1,.markdown-section h2,.markdown-section h3,.markdown-section h4,.markdown-section h5,.markdown-section h6 {
+    page-break-inside: avoid;
+}
+.markdown-section ol li {
+    padding-left: 0;
+}
